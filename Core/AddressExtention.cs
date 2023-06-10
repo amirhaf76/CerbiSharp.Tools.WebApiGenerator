@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CerbiSharp.Tools.WepApiGenerator.Core
+namespace CerbiSharp.Tools.WebApiGenerator.Core
 {
     public static class AddressExtention
     {

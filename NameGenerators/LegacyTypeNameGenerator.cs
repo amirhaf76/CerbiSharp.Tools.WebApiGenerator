@@ -1,6 +1,6 @@
 ﻿using NJsonSchema;
 
-namespace CerbiSharp.Tools.WepApiGenerator.NameGenerators
+namespace CerbiSharp.Tools.WebApiGenerator.NameGenerators
 {
     public class LegacyTypeNameGenerator : ITypeNameGenerator
     {

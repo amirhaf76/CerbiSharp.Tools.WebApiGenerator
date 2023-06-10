@@ -1,4 +1,4 @@
-﻿namespace CerbiSharp.Tools.WepApiGenerator.SampleSwagger
+﻿namespace CerbiSharp.Tools.WebApiGenerator.SampleSwagger
 {
     internal class SampleSwaggerConfig
     {

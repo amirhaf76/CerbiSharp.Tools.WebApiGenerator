@@ -1,4 +1,4 @@
-﻿namespace CerbiSharp.Tools.WepApiGenerator.Core
+﻿namespace CerbiSharp.Tools.WebApiGenerator.Core
 {
     public class Addresses
     {

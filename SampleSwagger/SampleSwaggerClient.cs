@@ -15,6 +15,7 @@
 
 namespace CerbiSharp.Tools.WepApiGenerator.SampleSwagger
 {
+    using CerbiSharp.Tools.WebApiGenerator.SampleSwagger;
     using System = global::System;
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.17.0.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v9.0.0.0))")]

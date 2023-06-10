@@ -2,7 +2,7 @@
 using NSwag.CodeGeneration.OperationNameGenerators;
 using System.Text;
 
-namespace CerbiSharp.Tools.WepApiGenerator.NameGenerators
+namespace CerbiSharp.Tools.WebApiGenerator.NameGenerators
 {
     /// <summary>
     /// For generating api clients from swaggger.

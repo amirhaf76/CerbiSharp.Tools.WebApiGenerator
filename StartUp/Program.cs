@@ -1,4 +1,4 @@
-﻿using CerbiSharp.Tools.WepApiGenerator.Core;
+﻿using CerbiSharp.Tools.WebApiGenerator.Core;
 using Microsoft.Extensions.Configuration;
 
 

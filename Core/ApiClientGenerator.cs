@@ -1,8 +1,8 @@
-﻿using CerbiSharp.Tools.WepApiGenerator.NameGenerators;
+﻿using CerbiSharp.Tools.WebApiGenerator.NameGenerators;
 using NSwag;
 using NSwag.CodeGeneration.CSharp;
 
-namespace CerbiSharp.Tools.WepApiGenerator.Core
+namespace CerbiSharp.Tools.WebApiGenerator.Core
 {
     public class ApiClientGenerator
     {

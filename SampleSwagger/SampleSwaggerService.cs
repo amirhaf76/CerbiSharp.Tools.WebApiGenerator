@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using CerbiSharp.Tools.WepApiGenerator.SampleSwagger;
+using Microsoft.Extensions.Configuration;
 
-namespace CerbiSharp.Tools.WepApiGenerator.SampleSwagger
+namespace CerbiSharp.Tools.WebApiGenerator.SampleSwagger
 {
     public class SampleSwaggerService
     {

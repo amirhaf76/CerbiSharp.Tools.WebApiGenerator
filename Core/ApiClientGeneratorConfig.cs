@@ -1,6 +1,6 @@
 ﻿using NSwag.CodeGeneration.CSharp;
 
-namespace CerbiSharp.Tools.WepApiGenerator.Core
+namespace CerbiSharp.Tools.WebApiGenerator.Core
 {
     public class ApiClientGeneratorConfig
     {
