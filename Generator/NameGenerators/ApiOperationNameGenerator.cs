@@ -2,7 +2,7 @@
 using NSwag.CodeGeneration.OperationNameGenerators;
 using System.Text;
 
-namespace CerbiSharp.Tools.WebApiGenerator.NameGenerators
+namespace CerbiSharp.Tools.WebApiGenerator.Generator.NameGenerators
 {
     /// <summary>
     /// For generating api clients from swaggger.
@@ -11,7 +11,7 @@ namespace CerbiSharp.Tools.WebApiGenerator.NameGenerators
     ///     https://github.com/RicoSuter/NSwag/wiki/CSharpClientGenerator
     ///     https://github.com/RicoSuter/NSwag/wiki/CSharpClientGeneratorSettings
     ///     https://github.com/RicoSuter/NSwag/wiki/ClientGeneratorBaseSettings
-    internal class ApiOperationNameGenerator : IOperationNameGenerator
+    public class ApiOperationNameGenerator : IOperationNameGenerator
     {
         public bool SupportsMultipleClients => true;
 

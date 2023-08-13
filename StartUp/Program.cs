@@ -1,9 +1,8 @@
-﻿using CerbiSharp.Tools.WebApiGenerator.Core;
+﻿using CerbiSharp.Tools.WebApiGenerator.Extensions;
+using CerbiSharp.Tools.WebApiGenerator.Generator;
 using Microsoft.Extensions.Configuration;
 
-
 var paths = new List<string>();
-
 
 paths.Add(await CreateSampleSwaggerClientAsync());
 
@@ -13,29 +12,35 @@ paths.ForEach(e => Console.WriteLine(e));
 static async Task<string> CreateSampleSwaggerClientAsync()
 {
     const string NAME_SPACE = "CerbiSharp.Tools.WepApiGenerator.SampleSwagger";
-    const string FILE_NAME = "SampleSwaggerClient";
+    const string FILE_NAME = "SampleSwaggerClient.cs";
 
     var swaggerJsonUrl = (GetAppSettings()?.GetSection("Urls:SampleSwagger").Get<string>()) ?? string.Empty;
 
-    return await ApiClientGeneratorConfig
-        .CreateDefaultApiClientGeneratorConfigWithDefaultGeneratorSetting(NAME_SPACE, FILE_NAME)
-        .ConfigGeneratorSettings(setting =>
+    return await new ApiClientGeneratorConfig()
+        .SetDefaultApiClientGeneratorSettings()
+        .ConfigApiClientGeneratorConfig(config =>
         {
+            config.UrlAddress = swaggerJsonUrl;
+            config.Output = FILE_NAME;
+
+            var settings = config.GeneratorSettings;
+
+            settings.CSharpGeneratorSettings.Namespace = NAME_SPACE;
+
             // add your configuration.
-            setting.ClientClassAccessModifier = "internal";
-            setting.ClientBaseClass = "SampleSwaggerBaseClient";
+            settings.ClientClassAccessModifier = "internal";
+            settings.ClientBaseClass = "SampleSwaggerBaseClient";
 
             // An interface is used here for dependency injection.
-            setting.ConfigurationClass = "SampleSwaggerConfig";
-            setting.UseHttpClientCreationMethod = true;
+            settings.ConfigurationClass = "SampleSwaggerConfig";
+            settings.UseHttpClientCreationMethod = true;
 
-            // Setting name for response class.Default: SwaggerResponse
+            // Setting name for response class.Default: SwaggerResponse.
             // setting.ResponseClass = "SwaggerResponseLegacy";
 
             // Setting name generator.Default: ApiOperationNameGenerator.
             // setting.CSharpGeneratorSettings.TypeNameGenerator = new LegacyTypeNameGenerator();
         })
-        .SetAddressUrl(swaggerJsonUrl)
         .GenerateClientFileAndSaveAsync();
 }
 
