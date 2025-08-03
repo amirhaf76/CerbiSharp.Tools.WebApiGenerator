@@ -13,7 +13,7 @@
 
         public string? BaseUrl { get; private set; }
 
-        protected async Task<HttpClient> CreateHttpClientAsync(CancellationToken ct = default)
+        protected static async Task<HttpClient> CreateHttpClientAsync(CancellationToken ct = default)
         {
             return await Task.FromResult(new HttpClient());
         }
