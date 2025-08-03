@@ -1,4 +1,5 @@
 ﻿using CerbiSharp.Tools.WebApiGenerator.Generator;
+using CerbiSharp.Tools.WebApiGenerator.Generator.NameGenerators;
 using NSwag.CodeGeneration.CSharp;
 
 namespace CerbiSharp.Tools.WebApiGenerator.Extensions
@@ -17,6 +18,8 @@ namespace CerbiSharp.Tools.WebApiGenerator.Extensions
             settings.CSharpGeneratorSettings.GenerateDataAnnotations = true;
             settings.CSharpGeneratorSettings.InlineNamedTuples = true;
             settings.CSharpGeneratorSettings.RequiredPropertiesMustBeDefined = true;
+
+            settings.OperationNameGenerator = new ApiOperationNameGenerator();
 
             settings.ExceptionClass = "ApiException";
 
