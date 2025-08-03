@@ -38,18 +38,18 @@ static async Task<string> CreateSampleSwaggerClientAsync()
             settings.UseHttpClientCreationMethod = true;
 
             //      Setting name for response class.Default: SwaggerResponse.
-            // setting.ResponseClass = "SwaggerResponseLegacy";
+            //setting.ResponseClass = "SwaggerResponseLegacy";
 
             //      Setting name generator.Default: ApiOperationNameGenerator.
-            // setting.CSharpGeneratorSettings.TypeNameGenerator = new LegacyTypeNameGenerator();
+            //setting.CSharpGeneratorSettings.TypeNameGenerator = new LegacyTypeNameGenerator();
 
             //      Injecting Http Client
-            settings.InjectHttpClient = true;
+            //settings.InjectHttpClient = true;
 
             //      Removing config and Base class
             settings.UseBaseUrl = false;
-            settings.ClientBaseClass = string.Empty;
-            settings.ConfigurationClass = string.Empty;
+            //settings.ClientBaseClass = string.Empty;
+            //settings.ConfigurationClass = string.Empty;
         })
         .GenerateClientFileAndSaveAsync();
 }

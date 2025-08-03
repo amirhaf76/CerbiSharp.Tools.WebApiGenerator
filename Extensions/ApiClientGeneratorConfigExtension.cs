@@ -14,6 +14,8 @@ namespace CerbiSharp.Tools.WebApiGenerator.Extensions
 
             settings.ClassName = "{controller}Client";
 
+            settings.OperationNameGenerator = new ApiOperationNameGenerator();
+
             settings.CSharpGeneratorSettings.GenerateDefaultValues = true;
             settings.CSharpGeneratorSettings.GenerateDataAnnotations = true;
             settings.CSharpGeneratorSettings.InlineNamedTuples = true;
