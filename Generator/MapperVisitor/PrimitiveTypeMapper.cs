@@ -9,7 +9,9 @@ namespace CerbiSharp.Tools.WebApiGenerator.Generator.MapperVisitor
         {
             if (data is PrimitiveTypeMapperDto mapper)
             {
-                if (schema.Type == mapper.JsonObjectType && schema.Format.Equals(mapper.JsonFormat, StringComparison.CurrentCultureIgnoreCase))
+                if (schema.Type == mapper.JsonObjectType &&
+                    schema.Format != null &&
+                    schema.Format.Equals(mapper.JsonFormat, StringComparison.CurrentCultureIgnoreCase))
                 {
                     schema.Type = mapper.MapToType;
                     schema.Format = mapper.MapToFormat;

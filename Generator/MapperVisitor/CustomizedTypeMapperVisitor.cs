@@ -14,7 +14,7 @@ namespace CerbiSharp.Tools.WebApiGenerator.Generator.MapperVisitor
             _typeMapper = typeMapper;
         }
 
-        protected override JsonSchema VisitSchema(JsonSchema schema, string path, string typeNameHint)
+        protected override JsonSchema VisitSchema(JsonSchema schema, string path, string? typeNameHint)
         {
             foreach (var mapperDto in _typeMapperDtos)
             {

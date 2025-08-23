@@ -11,7 +11,7 @@ namespace CerbiSharp.Tools.WebApiGenerator.Generator.NameGenerators
             _defaultTypeNameGenerator = new DefaultTypeNameGenerator();
         }
 
-        public string Generate(JsonSchema schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
+        public string Generate(JsonSchema schema, string? typeNameHint, IEnumerable<string> reservedTypeNames)
         {
             return _defaultTypeNameGenerator.Generate(schema, $"Legacy{typeNameHint}", reservedTypeNames);
 
