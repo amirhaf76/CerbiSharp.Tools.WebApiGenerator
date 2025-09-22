@@ -16,9 +16,5 @@ namespace CerbiSharp.Tools.WebApiGenerator.Exceptions
         public InvalidApiClientGeneratorConfigException(string? message, Exception? innerException) : base(message, innerException)
         {
         }
-
-        protected InvalidApiClientGeneratorConfigException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }

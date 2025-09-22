@@ -1,5 +1,4 @@
-﻿using CerbiSharp.Tools.WepApiGenerator.SampleSwagger;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace CerbiSharp.Tools.WebApiGenerator.SampleSwagger
 {
@@ -14,7 +13,7 @@ namespace CerbiSharp.Tools.WebApiGenerator.SampleSwagger
 
             var apiConfig = new SampleSwaggerConfig
             {
-                Url = (config?.GetSection("Urls:SampleSwagger").Get<string>()) ?? string.Empty,
+                Url = (config?.GetSection("URLs:SampleSwagger").Get<string>()) ?? string.Empty,
             };
 
             var petClient = new PetClient(apiConfig) as IPetClient;

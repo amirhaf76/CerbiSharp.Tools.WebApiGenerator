@@ -16,9 +16,5 @@ namespace CerbiSharp.Tools.WebApiGenerator.Exceptions
         public InvalidTypeDataTypeException(string? message, Exception? innerException) : base(message, innerException)
         {
         }
-
-        protected InvalidTypeDataTypeException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }
