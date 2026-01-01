@@ -2,9 +2,10 @@
 using CerbiSharp.Tools.WebApiGenerator.Generator;
 using Microsoft.Extensions.Configuration;
 
-var paths = new List<string>();
-
-paths.Add(await CreateSampleSwaggerClientAsync());
+var paths = new List<string>
+{
+    await CreateSampleSwaggerClientAsync()
+};
 
 paths.ForEach(e => Console.WriteLine(e));
 
@@ -14,7 +15,7 @@ static async Task<string> CreateSampleSwaggerClientAsync()
     const string NAME_SPACE = "CerbiSharp.Tools.WepApiGenerator.SampleSwagger";
     const string FILE_NAME = "SampleSwaggerClient.cs";
 
-    var swaggerJsonUrl = (GetAppSettings()?.GetSection("Urls:SampleSwagger").Get<string>()) ?? string.Empty;
+    var swaggerJsonUrl = (GetAppSettings()?.GetSection("URLs:SampleSwagger").Get<string>()) ?? string.Empty;
 
     return await new ApiClientGeneratorConfig()
         .SetDefaultApiClientGeneratorSettings()
